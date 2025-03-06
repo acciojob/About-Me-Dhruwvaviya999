@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
 
+		.container{
+			display:flex;
+			border:1px solid gray;
+			box-shadow:2px 2px 15px;
+			padding:20px;
+		}
+		
+		.profile-top{
+			display:flex;
+		}
+
+		.profile-page{
+			flex:1;
+		}
+
+		.about-page{
+			flex:1;
+		}
+
+		.skills div{
+			width:100%;
+			height:5px;
+			background-color:blue;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+		<div class="profile-page">
+			<div class="profile-top">
+				<img width="200" src="data:image/jpeg;base64,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" alt="man-photo" />
+				<div class="student-profile">
+					<p><b>Name:</b> Dhruw Vaviya</p>
+					<p><b>Profile:</b> Software Developer</p>
+					<p><b>Email:</b> abcd@xyz.com</p>
+				</div>
+			</div>
+			<div class="skills">
+				<h3>Skills</h3>
+				<p>REACT CSS JAVASCRIPT 95%</p>
+				<div></div>
+				<p>NODEJS MONGODB 95%</p>
+				<div></div>
+				<p>C C++ PYTHON BATCH 90%</p>
+				<div></div>
+				<p>AWS HANDOOP 93%</p>
+				<div></div>
+			</div>
+		</div>
+		<div class="about-page">
+			<h2 style="border-bottom:3px solid blue; display:inline">About me</h2>
+			<p>Here, it is: for many, the first day of going back into the routine of work, school, volunteer roles and so many more activities, with the hectic hustle of the holidays behind us — looking down 364 days of new and exciting ways of doing things, of doing something you’ve want done for decades the same way but you think — given your extensive experience — you can go about it differently, bringing more productivity, more satisfaction, being an example to others around you, and — you know what they say about flattery — they start do the same thing because … you showed the way.</p>
+		</div>
+	</div>
+</body>
+</html>
